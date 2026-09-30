@@ -1,6 +1,6 @@
 {
     "name": "se7enxweb/ezpaypal",
-    "description": "eZ Publish extension which provides for real time payment processing for ecommerce websites. Great for smart developers!",
+    "description": "Exponential extension which provides for real time payment processing for ecommerce websites. Great for smart developers!",
     "type": "ezpublish-legacy-extension",
     "keywords": [ "eZ Publish", "eZ Publish Legacy", "eZ Publish Platform", "PayPal", "Payment Gateway", "extension", "Redirect Gateway" ],
     "homepage": "https://github.com/se7enxweb/ezpaypal",
