@@ -11,6 +11,7 @@
  * ## BEGIN COPYRIGHT, LICENSE AND WARRANTY NOTICE ##
  * SOFTWARE NAME: eZ Paypal Payment Gateway
  * SOFTWARE RELEASE: 1.0
+ * COPYRIGHT NOTICE: Copyright (C) 1998 - 2026 7x & Exponential Foundation
  * COPYRIGHT NOTICE: Copyright (C) 1999-2006 eZ Systems AS
  * SOFTWARE LICENSE: GNU General Public License v2.0
  * NOTICE: >
