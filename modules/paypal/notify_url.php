@@ -31,36 +31,5 @@
 /*! \file notify_url.php
 */
 
-$logger  = eZPaymentLogger::CreateForAdd('var/log/eZPaypal_notify_url.log');
-$checker = new eZPaypalChecker( 'paypal.ini' );
-if( $checker->createDataFromPOST() )
-{
-    unset ($_POST);
-
-    if( $checker->requestValidation() && $checker->checkPaymentStatus() )
-    {
-	$orderID = $checker->getFieldValue( 'custom' );
-
-	if( $checker->setupOrderAndPaymentObject( $orderID ) )
-	{
-	    $amount   = $checker->getFieldValue( 'mc_gross' );
-	    $currency = $checker->getFieldValue( 'mc_currency' );
-
-	    if( $checker->checkAmount( $amount ) && $checker->checkCurrency( $currency ) )
-	    {
-		$checker->approvePayment();
-		$checker->updateStatus();
-		
-		$order = eZOrder::fetch( $orderID );
-
-		if ( isset( $order ) )
-		{
-		    // Any special processing for the order goes here
-	        }
-	    }
-	}
-    }
-}
-
-$logger->writeTimedString( 'notify_url.php was propertly ended' );
-?>
+// The code is in extension/ezpaypal/classes/runnable/views/paypal/notify_url.php (#207); this file is the entry point.
+return \Exponential\View\Extension\Ezpaypal\Paypal\NotifyUrl::main( __FILE__, get_defined_vars() );
